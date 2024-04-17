@@ -27,7 +27,6 @@
     "raf": "3.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "rimraf": "5.0.5",
     "tsx": "4.6.1",
     "typescript": "5.2.2",
     "vite": "4.5.0"
@@ -37,7 +36,6 @@
     "react-dom": "^16.6.0 || ^17.0.0 || ^18.0.0"
   },
   "scripts": {
-    "clean": "rimraf lib",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint --report-unused-disable-directives .",
     "lint-fix": "yarn lint --fix",
     "test": "vitest run",
