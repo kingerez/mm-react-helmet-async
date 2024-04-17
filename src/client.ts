@@ -60,7 +60,7 @@ const updateTags = (type: string, tags: HTMLElement[]) => {
     });
   }
 
-  oldTags.forEach((tag: Node) => tag.parentNode?.removeChild(tag));
+  oldTags.forEach((tag: Node) => tag.parentNode && tag.parentNode.removeChild(tag));
   newTags.forEach(tag => headElement.appendChild(tag));
 
   return {

@@ -10,7 +10,7 @@ let root: Root | null = null;
 
 export const unmount = () => {
   act(() => {
-    root?.unmount();
+    root && root.unmount();
     root = null;
   });
 };
@@ -22,7 +22,7 @@ export const render = (node: ReactNode, context = {} as any) => {
   }
 
   act(() => {
-    root?.render(
+    root && root.render(
       <StrictMode>
         <Provider context={context}>{node}</Provider>
       </StrictMode>
