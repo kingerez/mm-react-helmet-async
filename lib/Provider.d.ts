@@ -12,6 +12,6 @@ export default class HelmetProvider extends Component<PropsWithChildren<Provider
     static canUseDOM: boolean;
     helmetData: HelmetData;
     constructor(props: PropsWithChildren<ProviderProps>);
-    render(): React.JSX.Element;
+    render(): any;
 }
 export {};

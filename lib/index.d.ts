@@ -34,5 +34,5 @@ export declare class Helmet extends Component<PropsWithChildren<HelmetProps>> {
     mapChildrenToProps(children: ReactNode, newProps: Props): {
         [x: string]: any;
     };
-    render(): React.JSX.Element;
+    render(): any;
 }
