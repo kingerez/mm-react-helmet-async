@@ -1,24 +1,16 @@
-import type { HTMLAttributes, JSX } from 'react';
+import type { HTMLAttributes } from 'react';
 
 import type HelmetData from './HelmetData';
 
 export type Attributes = { [key: string]: string };
 
-interface OtherElementAttributes {
-  [key: string]: string | number | boolean | null | undefined;
-}
+export type HtmlProps = any;
 
-export type HtmlProps = JSX.IntrinsicElements['html'] & OtherElementAttributes;
+export type BodyProps = any;
 
-export type BodyProps = JSX.IntrinsicElements['body'] & OtherElementAttributes;
+export type LinkProps = any;
 
-export type LinkProps = JSX.IntrinsicElements['link'];
-
-export type MetaProps = JSX.IntrinsicElements['meta'] & {
-  charset?: string | undefined;
-  'http-equiv'?: string | undefined;
-  itemprop?: string | undefined;
-};
+export type MetaProps = any;
 
 export type TitleProps = HTMLAttributes<HTMLTitleElement>;
 
