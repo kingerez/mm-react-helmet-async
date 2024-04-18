@@ -1,5 +1,6 @@
 import type { PropsWithChildren, ReactElement, ReactNode } from 'react';
 import React, { Component } from 'react';
+import HelmetData from './HelmetData';
 import type { HelmetProps } from './types';
 export * from './types';
 export { default as HelmetData } from './HelmetData';
@@ -34,5 +35,6 @@ export declare class Helmet extends Component<PropsWithChildren<HelmetProps>> {
     mapChildrenToProps(children: ReactNode, newProps: Props): {
         [x: string]: any;
     };
-    render(): any;
+    render(): React.JSX.Element;
 }
+export default HelmetData;

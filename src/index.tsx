@@ -213,3 +213,5 @@ export class Helmet extends Component<PropsWithChildren<HelmetProps>> {
     );
   }
 }
+
+export default HelmetData;
