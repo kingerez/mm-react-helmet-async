@@ -21,16 +21,16 @@ export declare class Helmet extends Component<PropsWithChildren<HelmetProps>> {
         cssText: string | number | true | ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<ReactNode> | React.ReactPortal;
         innerHTML?: undefined;
     };
-    flattenArrayTypeChildren(child: JSX.Element, arrayTypeChildren: {
-        [key: string]: JSX.Element[];
+    flattenArrayTypeChildren(child: any, arrayTypeChildren: {
+        [key: string]: any[];
     }, newChildProps: Props, nestedChildren: ReactNode): {};
-    mapObjectTypeChildren(child: JSX.Element, newProps: Props, newChildProps: Props, nestedChildren: ReactNode): {};
+    mapObjectTypeChildren(child: any, newProps: Props, newChildProps: Props, nestedChildren: ReactNode): {};
     mapArrayTypeChildrenToProps(arrayTypeChildren: {
-        [key: string]: JSX.Element;
+        [key: string]: any;
     }, newProps: Props): {
         [x: string]: any;
     };
-    warnOnInvalidChildren(child: JSX.Element, nestedChildren: ReactNode): boolean;
+    warnOnInvalidChildren(child: any, nestedChildren: ReactNode): boolean;
     mapChildrenToProps(children: ReactNode, newProps: Props): {
         [x: string]: any;
     };

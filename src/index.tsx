@@ -54,8 +54,8 @@ export class Helmet extends Component<PropsWithChildren<HelmetProps>> {
   }
 
   flattenArrayTypeChildren(
-    child: JSX.Element,
-    arrayTypeChildren: { [key: string]: JSX.Element[] },
+    child: any,
+    arrayTypeChildren: { [key: string]: any[] },
     newChildProps: Props,
     nestedChildren: ReactNode
   ) {
@@ -72,7 +72,7 @@ export class Helmet extends Component<PropsWithChildren<HelmetProps>> {
   }
 
   mapObjectTypeChildren(
-    child: JSX.Element,
+    child: any,
     newProps: Props,
     newChildProps: Props,
     nestedChildren: ReactNode
@@ -104,7 +104,7 @@ export class Helmet extends Component<PropsWithChildren<HelmetProps>> {
     }
   }
 
-  mapArrayTypeChildrenToProps(arrayTypeChildren: { [key: string]: JSX.Element }, newProps: Props) {
+  mapArrayTypeChildrenToProps(arrayTypeChildren: { [key: string]: any }, newProps: Props) {
     let newFlattenedProps = { ...newProps };
 
     Object.keys(arrayTypeChildren).forEach(arrayChildName => {
@@ -117,7 +117,7 @@ export class Helmet extends Component<PropsWithChildren<HelmetProps>> {
     return newFlattenedProps;
   }
 
-  warnOnInvalidChildren(child: JSX.Element, nestedChildren: ReactNode) {
+  warnOnInvalidChildren(child: any, nestedChildren: ReactNode) {
     invariant(
       VALID_TAG_NAMES.some(name => child.type === name),
       typeof child.type === 'function'
@@ -143,7 +143,7 @@ export class Helmet extends Component<PropsWithChildren<HelmetProps>> {
   mapChildrenToProps(children: ReactNode, newProps: Props) {
     let arrayTypeChildren = {};
 
-    React.Children.forEach(children as JSX.Element, (child: ReactElement) => {
+    React.Children.forEach(children as any, (child: ReactElement) => {
       if (!child || !child.props) {
         return;
       }
